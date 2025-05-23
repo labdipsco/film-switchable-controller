@@ -11,7 +11,7 @@
 #include <Arduino.h>
 
 // Definition of the pin connected to the relay
-const int pinRele = 8;
+const int pinRele = 7;
 
 void setup() {
     Serial.begin(115200);
@@ -37,18 +37,17 @@ unsigned long currentTime;
 int startPinValue;
 int pin;
 
-// unsigned long uno;
-// unsigned long due;
+unsigned long uno;
+unsigned long due;
 
 void loop() {
-    if (Serial.available() > 0) {
-        // uno = micros();
+
+      if (Serial.available() > 0) {
+        uno = micros();
         char firstChar = Serial.read();
 
         if (firstChar == 'o') {
             digitalWrite(pinRele, HIGH);
-            // due = micros();
-            // Serial.println(due - uno);
             return;
         }
 
@@ -78,20 +77,21 @@ void loop() {
             int stopPinValue = (startPinValue == HIGH) ? LOW : HIGH;
 
             digitalWrite(pinRele, startPinValue);
+            due = micros();
             // due = micros();
 
             // Start counting the time
             startTime = micros();
-
+             
             // Wait for the indicated time
             while (micros() - startTime < duration);
 
             digitalWrite(pinRele, stopPinValue);
-            // due = micros();
+            
 
             // Clear any extra commands that arrived during the delay
             clearSerialInput();
-
+            
             // Serial.println(due - uno);
         }
     } // end if Serial.available()
