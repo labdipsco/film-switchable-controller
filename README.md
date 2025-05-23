@@ -47,9 +47,15 @@ These commands allow **precise control** over stimulus timing in behavioral expe
 
 ## ⚠️ Important Safety Notes
 
-- The film requires **AC power** and must be handled with caution.
-- Always use a **relay module with proper isolation** between Arduino (low voltage) and the film's high-voltage AC circuit.
-- Never connect high voltage directly to the Arduino or your PC.
+- The switchable film operates with **AC power** and must be handled with **extreme caution**.
+- Always use a **relay module with proper galvanic isolation** between the Arduino (low-voltage side) and the high-voltage AC circuit connected to the film.
+- Never connect high voltage directly to the Arduino or to your computer.
+- The entire apparatus (relay module, AC driver, wiring, and switchable film) must be **adequately insulated and enclosed** to prevent accidental contact with live components.
+- Ensure that all connections comply with **electrical safety standards**, and avoid handling the system when powered unless it is fully enclosed and safe.
+- If you are not familiar with working with mains voltage (e.g., 220V AC), consult a qualified technician before proceeding.
+
+⚠️ **High voltage can cause serious injury or death**. This project is intended for educational or laboratory use by individuals with adequate knowledge of electrical safety.
+
 
 ---
 
