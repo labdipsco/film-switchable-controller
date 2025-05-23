@@ -35,10 +35,9 @@ This setup is ideal for labs conducting **psychological**, **visual perception**
 |--------------|--------------------------------------------------------------------|
 | `o`          | Activate the film (make it opaque)                                 |
 | `c`          | Deactivate the film (make it transparent)                          |
-| `O2000E`     | Activate for 2000 ms, then deactivate                              |
-| `C1000E`     | Deactivate for 1000 ms, then activate                              |
-| `O2000T`     | Activate for 2000 ms, then automatically deactivate (**Timed**)    |
-| `C2000T`     | Deactivate for 2000 ms, then automatically activate (**Timed**)    |
+| `O<time in ms>E`     | Activate, then deactivate, example: O2000E                 |
+| `C<time in ms>E`     | Deactivate, then activate, example: C2400E                |
+
 
 > `T` suffix = **timed trigger** command for automatic activation followed by deactivation.
 
