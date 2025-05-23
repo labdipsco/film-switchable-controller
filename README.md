@@ -29,6 +29,32 @@ This setup is ideal for labs conducting **psychological**, **visual perception**
 
 ---
 
+## 🔧 Hardware Requirements
+
+To build this system, you'll need the following components:
+
+### 1. Arduino UNO R4 Minima
+- **USB Interface**: USB-C connector
+*Note*: The UNO R4 Minima maintains the classic UNO form factor, ensuring compatibility with existing shields and accessories.
+For more details, refer to the [Arduino UNO R4 Minima Documentation](https://docs.arduino.cc/hardware/uno-r4-minima/).
+
+### 2. Relay Shield for Arduino UNO 
+This shield allows the Arduino to control high-power loads
+For more information, see the [Arduino 4 Relays Shield Basics](https://docs.arduino.cc/tutorials/4-relays-shield/4-relay-shield-basics/).
+
+### 3. Switchable Film (Smart Film)
+
+The switchable film used in this project was kindly provided by [Innoptec](https://www.innoptec.com). This film changes its transparency state when an electrical voltage is applied, making it ideal for applications requiring controlled light transmission.
+*Note*: The film requires an appropriate AC power supply (typically 60–100V AC) and should be handled with care, ensuring all safety precautions are followed.
+
+---
+
+Ensure all components are properly connected and insulated to maintain safety and functionality. Always consult the respective datasheets and user manuals for detailed information and guidelines.
+
+
+
+---
+
 ## 📡 Serial Command Reference
 
 | Command      | Description                                                        |
