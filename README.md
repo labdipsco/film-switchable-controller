@@ -31,8 +31,8 @@ To build this system, you'll need the following components:
 - **USB Interface**: USB-C connector
 For more details, refer to the [Arduino UNO R4 Minima Documentation](https://docs.arduino.cc/hardware/uno-r4-minima/).
 
-### 2. Relay Shield for Arduino UNO or a Arduino compatible relay
-This shield allows the Arduino to control high-power loads
+### 2. Relay Shield for Arduino UNO or an Arduino compatible relay
+This shield allows the Arduino to control high-power loads up to 120V AC/3A. It's controlled from arduiho digital pins 4,5,6,7 at 5V.
 For more information, see the [Arduino 4 Relays Shield Basics](https://docs.arduino.cc/tutorials/4-relays-shield/4-relay-shield-basics/).
 
 ### 3. Switchable Film (Smart Film)
