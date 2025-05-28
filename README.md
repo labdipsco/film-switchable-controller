@@ -58,8 +58,8 @@ Download [controller.ino](https://github.com/labdipsco/film-switchable-controlle
 |--------------|--------------------------------------------------------------------|
 | `o`          | Activate the film (make it opaque)                                 |
 | `c`          | Deactivate the film (make it transparent)                          |
-| `O<time in ms>E`     | Activate, then deactivate, example: O2000E                 |
-| `C<time in ms>E`     | Deactivate, then activate, example: C2400E                |
+| `O<time in ms>E`     | Activate, then deactivate after delay (e.g., `O2000E`)     |
+| `C<time in ms>E`     | Deactivate, then activate after delay (e.g., `C2400E`)     |
 
 ---
 
