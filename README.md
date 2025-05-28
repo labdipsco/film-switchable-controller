@@ -15,27 +15,17 @@ This setup is ideal for labs conducting **psychological**, **visual perception**
 ## 🛠️ How it works
 
 - The Arduino listens for serial commands via USB.
-- When a command is received (e.g., `'o'` to turn the film on, `'c'` to turn it off), it activates a relay.
+- When a command is received (e.g., `'o'` to turn the film on, `'c'` to turn it off), it activates a relay. Timed control is also possible.
 - The relay controls the AC power to the switchable film (typically 60–100V AC depending on the film).
 - Commands can be triggered programmatically from experimental software.
 
 ---
-
-## 🧪 Example Applications
-
-- Temporarily obscure visual stimuli during an experiment.
-- Control light transmission in timing-critical trials.
-- Integrate smart glass control into behavioral tasks.
-
----
-
 ## 🔧 Hardware Requirements
 
 To build this system, you'll need the following components:
 
 ### 1. Arduino UNO R4 Minima
 - **USB Interface**: USB-C connector
-*Note*: The UNO R4 Minima maintains the classic UNO form factor, ensuring compatibility with existing shields and accessories.
 For more details, refer to the [Arduino UNO R4 Minima Documentation](https://docs.arduino.cc/hardware/uno-r4-minima/).
 
 ### 2. Relay Shield for Arduino UNO 
@@ -51,8 +41,6 @@ The switchable film used in this project was kindly provided by [Innoptec](https
 
 Ensure all components are properly connected and insulated to maintain safety and functionality. Always consult the respective datasheets and user manuals for detailed information and guidelines.
 
-
-
 ---
 
 ## 📡 Serial Command Reference
@@ -63,11 +51,6 @@ Ensure all components are properly connected and insulated to maintain safety an
 | `c`          | Deactivate the film (make it transparent)                          |
 | `O<time in ms>E`     | Activate, then deactivate, example: O2000E                 |
 | `C<time in ms>E`     | Deactivate, then activate, example: C2400E                |
-
-
-> `T` suffix = **timed trigger** command for automatic activation followed by deactivation.
-
-These commands allow **precise control** over stimulus timing in behavioral experiments or visual exposure studies.
 
 ---
 
