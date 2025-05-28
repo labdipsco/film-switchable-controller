@@ -19,7 +19,7 @@ This setup is ideal for labs conducting **psychological**, **visual perception**
 - The relay controls the AC power to the switchable film (typically 60–100V AC depending on the film).
 - Commands can be triggered programmatically from experimental software.
 
-<img src="https://github.com/user-attachments/assets/17b025e9-c98e-49ff-8e7e-552d12713f2d" alt="Alt Text" style="width:70%; height:auto;">
+<img src="https://github.com/user-attachments/assets/6057584a-f228-4490-a199-25440742b28f" alt="Alt Text" style="width:70%; height:auto;">
 
 ---
 
