@@ -16,7 +16,7 @@ This setup is ideal for labs conducting **psychological**, **visual perception**
 
 - The Arduino listens for serial commands via USB.
 - When a command is received (e.g., `'o'` to turn the film on, `'c'` to turn it off), it activates a relay. Timed control is also possible.
-- The relay controls the AC power to the switchable film (typically 60–100V AC depending on the film).
+- The relay controls the AC power to the switchable film (typically 45/60V AC depending on the film).
 - Commands can be triggered programmatically from experimental software.
 
 <img src="https://github.com/user-attachments/assets/6057584a-f228-4490-a199-25440742b28f" alt="Alt Text" style="width:70%; height:auto;">
