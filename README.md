@@ -38,7 +38,7 @@ For more information, see the [Arduino 4 Relays Shield Basics](https://docs.ardu
 ### 3. Switchable Film (Smart Film)
 
 The switchable film used in this project was kindly provided by [Innoptec](https://www.innoptec.com). This film changes its transparency state when an electrical voltage is applied, making it ideal for applications requiring controlled light transmission.
-*Note*: The film requires an appropriate AC power supply (typically 60–100V AC) and should be handled with care, ensuring all safety precautions are followed.
+*Note*: The film requires an appropriate AC power supply (typically 45 or 60V/50Hz AC) and should be handled with care, ensuring all safety precautions are followed.
 
 ---
 
