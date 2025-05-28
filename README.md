@@ -18,6 +18,7 @@ This setup is ideal for labs conducting **psychological**, **visual perception**
 - When a command is received (e.g., `'o'` to turn the film on, `'c'` to turn it off), it activates a relay. Timed control is also possible.
 - The relay controls the AC power to the switchable film (typically 60–100V AC depending on the film).
 - Commands can be triggered programmatically from experimental software.
+![image](https://github.com/user-attachments/assets/17b025e9-c98e-49ff-8e7e-552d12713f2d)
 
 ---
 ## 🔧 Hardware Requirements
