@@ -18,9 +18,11 @@ This setup is ideal for labs conducting **psychological**, **visual perception**
 - When a command is received (e.g., `'o'` to turn the film on, `'c'` to turn it off), it activates a relay. Timed control is also possible.
 - The relay controls the AC power to the switchable film (typically 60–100V AC depending on the film).
 - Commands can be triggered programmatically from experimental software.
-![image](https://github.com/user-attachments/assets/17b025e9-c98e-49ff-8e7e-552d12713f2d)
+
+<img src="https://github.com/user-attachments/assets/17b025e9-c98e-49ff-8e7e-552d12713f2d" alt="Alt Text" style="width:70%; height:auto;">
 
 ---
+
 ## 🔧 Hardware Requirements
 
 To build this system, you'll need the following components:
@@ -29,7 +31,7 @@ To build this system, you'll need the following components:
 - **USB Interface**: USB-C connector
 For more details, refer to the [Arduino UNO R4 Minima Documentation](https://docs.arduino.cc/hardware/uno-r4-minima/).
 
-### 2. Relay Shield for Arduino UNO 
+### 2. Relay Shield for Arduino UNO or a Arduino compatible relay
 This shield allows the Arduino to control high-power loads
 For more information, see the [Arduino 4 Relays Shield Basics](https://docs.arduino.cc/tutorials/4-relays-shield/4-relay-shield-basics/).
 
@@ -41,6 +43,12 @@ The switchable film used in this project was kindly provided by [Innoptec](https
 ---
 
 Ensure all components are properly connected and insulated to maintain safety and functionality. Always consult the respective datasheets and user manuals for detailed information and guidelines.
+
+---
+
+## 📡 Install
+
+Download 
 
 ---
 
