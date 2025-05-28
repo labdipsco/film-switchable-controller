@@ -75,6 +75,10 @@ Download [controller.ino](https://github.com/labdipsco/film-switchable-controlle
 ⚠️ **High voltage can cause serious injury or death**. This project is intended for educational or laboratory use by individuals with adequate knowledge of electrical safety.
 
 
+## 📢 Disclaimer
+
+This project is provided “as is” without warranty of any kind. By using or building this system, you acknowledge and agree that you do so at your own risk. The creators of this project are not responsible for any injury, damage, or legal issues that may arise from improper use, installation, or handling of high-voltage equipment. Always follow local safety regulations and consult a professional if unsure.
+
 ---
 
 Feel free to fork the project and adapt it to your experimental setup. Contributions and suggestions are welcome!
