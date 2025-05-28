@@ -1,14 +1,81 @@
 /*
+  ------------------------------------------------------------------------
+  USB-Controlled Switchable Film Controller
+  ------------------------------------------------------------------------
+
+  DISCLAIMER:
+  This code is provided "as is" for educational and research purposes only.
+
+  By using or modifying this code, you acknowledge and agree that:
+  - The authors and contributors are not responsible for any damage, injury,
+    or legal consequences resulting from the use or misuse of this software.
+  - You are solely responsible for ensuring the correct and safe connection
+    of all electrical components, especially when dealing with high-voltage AC.
+  - This software is not certified for commercial or industrial applications,
+    and should only be used in controlled, low-risk environments (e.g., labs).
+  - Always test and verify functionality in a safe setup before real-world use.
+  - If you are not familiar with electronics or safety standards, consult a
+    qualified technician before proceeding.
+  Use at your own risk.
+*/
+
+/*
+  ------------------------------------------------------------------------
+  USB-Controlled Switchable Film Controller
+  ------------------------------------------------------------------------
+
+  DISCLAIMER:
+  This code is provided "as is" for educational and research purposes only.
+
+  By using or modifying this code, you acknowledge and agree that:
+  - The authors and contributors are not responsible for any damage, injury,
+    or legal consequences resulting from the use or misuse of this software.
+  - You are solely responsible for ensuring the correct and safe connection
+    of all electrical components, especially when dealing with high-voltage AC.
+  - This software is not certified for commercial or industrial applications,
+    and should only be used in controlled, low-risk environments (e.g., labs).
+  - Always test and verify functionality in a safe setup before real-world use.
+  - If you are not familiar with electronics or safety standards, consult a
+    qualified technician before proceeding.
+
+  Use at your own risk.
+
+  ------------------------------------------------------------------------
+*/
+/*
+  ------------------------------------------------------------------------
+  USB-Controlled Switchable Film Controller
+  ------------------------------------------------------------------------
+
+  DISCLAIMER:
+  This code is provided "as is" for educational and research purposes only.
+
+  By using or modifying this code, you acknowledge and agree that:
+  - The authors and contributors are not responsible for any damage, injury,
+    or legal consequences resulting from the use or misuse of this software.
+  - You are solely responsible for ensuring the correct and safe connection
+    of all electrical components, especially when dealing with high-voltage AC.
+  - This software is not certified for commercial or industrial applications,
+    and should only be used in controlled, low-risk environments (e.g., labs).
+  - Always test and verify functionality in a safe setup before real-world use.
+  - If you are not familiar with electronics or safety standards, consult a
+    qualified technician before proceeding.
+
+  Use at your own risk.
+
+  ------------------------------------------------------------------------
+*/
+/*
   Code for controlling darkening panels (Sperandio)
   Valid commands:
-  oe       → sets pinRele HIGH
-  ce       → sets pinRele LOW
+  o       → sets pinRele HIGH
+  c       → sets pinRele LOW
   O2000E   → sets pinRele HIGH for 2000 ms, then LOW
   C2000E   → sets pinRele LOW for 2000 ms, then HIGH
 */
 
 // Comment for Tinkercad simulation
-#include <Arduino.h>
+//#include <Arduino.h>
 
 // Definition of the pin connected to the relay
 const int pinRele = 7;
@@ -28,22 +95,15 @@ void clearSerialInput() {
     }
 }
 
-bool isDigitChar(char c) {
-    return (c >= '0' && c <= '9');
-}
-
 unsigned long startTime;
-unsigned long currentTime;
 int startPinValue;
 int pin;
 
-unsigned long uno;
-unsigned long due;
 
 void loop() {
 
       if (Serial.available() > 0) {
-        uno = micros();
+        
         char firstChar = Serial.read();
 
         if (firstChar == 'o') {
@@ -77,9 +137,7 @@ void loop() {
             int stopPinValue = (startPinValue == HIGH) ? LOW : HIGH;
 
             digitalWrite(pinRele, startPinValue);
-            due = micros();
-            // due = micros();
-
+            
             // Start counting the time
             startTime = micros();
              
@@ -92,7 +150,6 @@ void loop() {
             // Clear any extra commands that arrived during the delay
             clearSerialInput();
             
-            // Serial.println(due - uno);
         }
     } // end if Serial.available()
 } // end loop
