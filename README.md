@@ -61,6 +61,29 @@ Download [controller.ino](https://github.com/labdipsco/film-switchable-controlle
 | `O<time in ms>E`     | Activate, then deactivate after delay (e.g., `O2000E`)     |
 | `C<time in ms>E`     | Deactivate, then activate after delay (e.g., `C2400E`)     |
 
+
+## 📡 Simple code for Send command to Arduino with Python and Matlab
+
+```python
+import serial
+import time
+# Define the command to send
+command = "O60000E"
+# Check which COM port is correct for your device on your system (e.g., COM3, COM4, etc.)
+ser = serial.Serial('COM3', baudrate=115200, timeout=1)
+ser.write(command.encode('utf-8'))
+ser.close()
+
+## 📡 Simple MATLAB Code to Send Serial Command to COM3
+
+```matlab
+% Define the command to send
+command = 'O15000E';
+% Check which COM port is correct for your device on your system (e.g., COM3, COM4, etc.)
+s = serialport("COM3", 115200);  % Adjust port name and baud rate as needed
+write(s, command, "string");
+clear s;
+
 ---
 
 ## ⚠️ Important Safety Notes
