@@ -74,7 +74,6 @@ ser = serial.Serial('COM3', baudrate=115200, timeout=1)
 ser.write(command.encode('utf-8'))
 ser.close()
 ```
-## 📡 Simple MATLAB Code to Send Serial Command to COM3
 
 ```matlab
 % Define the command to send
