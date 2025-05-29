@@ -48,11 +48,13 @@ Ensure all components are properly connected and insulated to maintain safety an
 
 ## 📡 Install
 
-Download [controller.ino](https://github.com/labdipsco/film-switchable-controller/blob/main/controller.ino),compile and upload to Arduino Uno with Arduino IDE https://www.arduino.cc/en/software/
+Download [controller.ino](https://github.com/labdipsco/film-switchable-controller/blob/main/controller.ino),compile and upload to Arduino Uno with [Arduino IDE](https://www.arduino.cc/en/software/)
 
 ---
 
 ## 📡 Serial Command Reference
+
+The values listed in the table are sent to Arduino to control the switchable film.
 
 | Command      | Description                                                        |
 |--------------|--------------------------------------------------------------------|
@@ -85,7 +87,6 @@ write(s, command, "string");
 clear s;
 ```
 ---
-
 ## ⚠️ Important Safety Notes
 
 - The switchable film operates with **AC power** and must be handled with **extreme caution**.
