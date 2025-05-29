@@ -73,7 +73,7 @@ command = "O60000E"
 ser = serial.Serial('COM3', baudrate=115200, timeout=1)
 ser.write(command.encode('utf-8'))
 ser.close()
-
+```
 ## 📡 Simple MATLAB Code to Send Serial Command to COM3
 
 ```matlab
@@ -83,7 +83,7 @@ command = 'O15000E';
 s = serialport("COM3", 115200);  % Adjust port name and baud rate as needed
 write(s, command, "string");
 clear s;
-
+```
 ---
 
 ## ⚠️ Important Safety Notes
