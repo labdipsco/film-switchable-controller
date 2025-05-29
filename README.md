@@ -75,6 +75,7 @@ ser.write(command.encode('utf-8'))
 ser.close()
 ```
 
+Matlab
 ```matlab
 % Define the command to send
 command = 'O15000E';
