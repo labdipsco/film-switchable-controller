@@ -1,5 +1,4 @@
 <meta name="google-site-verification" content="DVkORRPT3_jtPAdiCZB0SA2XDNqC32gUUw2klyyVbiQ" />
-
 #  USB-Controlled Switchable Film for Experimental Applications
 
 This is a simple Arduino-based application that allows USB serial control of a **switchable film** (also known as **smart film** or **PDLC film**). A switchable film is a special type of material that can switch between transparent and opaque states when an electrical signal is applied.
