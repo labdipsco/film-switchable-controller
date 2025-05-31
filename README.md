@@ -48,9 +48,9 @@ Ensure all components are properly connected and insulated to maintain safety an
 
 ---
 
-## 📡 Install
+## 📡 Installation
 
-Download [controller.ino](https://github.com/labdipsco/film-switchable-controller/blob/main/controller.ino),compile and upload to Arduino Uno with [Arduino IDE](https://www.arduino.cc/en/software/)
+Download [controller.ino](https://github.com/labdipsco/film-switchable-controller/blob/main/controller.ino), compile and upload to Arduino Uno with [Arduino IDE](https://www.arduino.cc/en/software/)
 
 ---
 
