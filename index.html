@@ -1,100 +1,68 @@
 <!DOCTYPE html>
+
 <html>
 <head>
-  <meta charset='UTF-8'>
-  <title>USB-Controlled Switchable Film</title>
+<meta charset="utf-8"/>
+<title>USB-Controlled Switchable Film</title>
 </head>
 <body>
 <h1>USB-Controlled Switchable Film for Experimental Applications</h1>
-
 <p>This is a simple Arduino-based application that allows USB serial control of a <strong>switchable film</strong> (also known as <strong>smart film</strong> or <strong>PDLC film</strong>). A switchable film is a special type of material that can switch between transparent and opaque states when an electrical signal is applied.</p>
-
 <p>By using an <strong>Arduino board</strong> and a <strong>relay module</strong>, the smart film can be controlled from a computer via a serial connection. You can send simple commands from:</p>
-
 <ul>
 <li>Python scripts</li>
 <li>Experimental software like <strong>OpenSesame</strong>, <strong>PsychoPy</strong>, <strong>E-Prime</strong></li>
 <li>MATLAB or other serial-enabled platforms</li>
 </ul>
-
 <p>This setup is ideal for labs conducting <strong>psychological</strong>, <strong>visual perception</strong>, or <strong>timing-sensitive</strong> experiments, where automated control of visual stimuli is required.</p>
-
-<hr />
-
+<hr/>
 <h2>🛠️ How it works</h2>
-
 <ul>
 <li>The Arduino listens for serial commands via USB.</li>
 <li>When a command is received (e.g., <code>'o'</code> to turn the film on, <code>'c'</code> to turn it off), it activates a relay. Timed control is also possible.</li>
 <li>The relay controls the AC power to the switchable film (typically 45/60V AC depending on the film).</li>
 <li>Commands can be triggered programmatically from experimental software.</li>
 </ul>
-
-<p><img src="https://github.com/user-attachments/assets/6057584a-f228-4490-a199-25440742b28f" alt="Alt Text" style="width:70%; height:auto;"></p>
-
-<hr />
-
+<p><img alt="Alt Text" src="https://github.com/user-attachments/assets/6057584a-f228-4490-a199-25440742b28f" style="width:70%; height:auto;"/></p>
+<hr/>
 <h2>🔧 Hardware Requirements</h2>
-
 <p>To build this system, you'll need the following components:</p>
-
 <h3>1. Arduino UNO R4 Minima</h3>
-
 <ul>
 <li><strong>USB Interface</strong>: USB-C connector
 For more details, refer to the <a href="https://docs.arduino.cc/hardware/uno-r4-minima/">Arduino UNO R4 Minima Documentation</a>.</li>
 </ul>
-
 <h3>2. Relay Shield for Arduino UNO or an Arduino compatible relay</h3>
-
 <p>This shield allows the Arduino to control high-power loads up to 120V AC/3A. The relay connected to the switchable film is controlled from arduino pin 7 at 5V.
 For more information, see the <a href="https://docs.arduino.cc/tutorials/4-relays-shield/4-relay-shield-basics/">Arduino 4 Relays Shield Basics</a>.</p>
-
 <h3>3. Switchable Film (Smart Film)</h3>
-
 <p>The switchable film used in this project was kindly provided by <a href="https://www.innoptec.com">Innoptec</a>. This film changes its transparency state when an electrical voltage is applied, making it ideal for applications requiring controlled light transmission.
 <em>Note</em>: The film requires an appropriate AC power supply (typically 45 or 60V/50Hz AC) and should be handled with care, ensuring all safety precautions are followed.</p>
-
-<hr />
-
+<hr/>
 <p>Ensure all components are properly connected and insulated to maintain safety and functionality. Always consult the respective datasheets and user manuals for detailed information and guidelines.</p>
-
-<hr />
-
+<hr/>
 <h2>📡 Install</h2>
-
 <p>Download <a href="https://github.com/labdipsco/film-switchable-controller/blob/main/controller.ino">controller.ino</a>,compile and upload to Arduino Uno with <a href="https://www.arduino.cc/en/software/">Arduino IDE</a></p>
-
-<hr />
-
+<hr/>
 <h2>📡 Serial Command Reference</h2>
-
 <p>The values listed in the table are sent to Arduino to control the switchable film.</p>
-
 <p>| Command      | Description                                                        |
 |--------------|--------------------------------------------------------------------|
 | <code>o</code>          | Activate the film (make it opaque)                                 |
 | <code>c</code>          | Deactivate the film (make it transparent)                          |
 | <code>O&lt;time in ms&gt;E</code>     | Activate, then deactivate after delay (e.g., <code>O2000E</code>)     |
 | <code>C&lt;time in ms&gt;E</code>     | Deactivate, then activate after delay (e.g., <code>C2400E</code>)     |</p>
-
 <h2>📡 Simple code for Send command to Arduino with Python and Matlab</h2>
-
 <p>```python
 import serial
 import time</p>
-
 <h1>Define the command to send</h1>
-
 <p>command = "O60000E"</p>
-
 <h1>Check which COM port is correct for your device on your system (e.g., COM3, COM4, etc.)</h1>
-
 <p>ser = serial.Serial('COM3', baudrate=115200, timeout=1)
 ser.write(command.encode('utf-8'))
 ser.close()
 ```</p>
-
 <p>Matlab
 ```matlab
 % Define the command to send
@@ -103,11 +71,8 @@ command = 'O15000E';
 s = serialport("COM3", 115200);  % Adjust port name and baud rate as needed
 write(s, command, "string");
 clear s;</p>
-
 <h2>```</h2>
-
 <h2>⚠️ Important Safety Notes</h2>
-
 <ul>
 <li>The switchable film operates with <strong>AC power</strong> and must be handled with <strong>extreme caution</strong>.</li>
 <li>Always use a <strong>relay module with proper galvanic isolation</strong> between the Arduino (low-voltage side) and the high-voltage AC circuit connected to the film.</li>
@@ -116,31 +81,22 @@ clear s;</p>
 <li>Ensure that all connections comply with <strong>electrical safety standards</strong>, and avoid handling the system when powered unless it is fully enclosed and safe.</li>
 <li>If you are not familiar with working with mains voltage (e.g., 220V AC), consult a qualified technician before proceeding.</li>
 </ul>
-
 <p>⚠️ <strong>High voltage can cause serious injury or death</strong>. This project is intended for educational or laboratory use by individuals with adequate knowledge of electrical safety.</p>
-
 <h2>📢 Disclaimer</h2>
-
 <p>This project is provided “as is” without warranty of any kind. By using or building this system, you acknowledge and agree that you do so at your own risk. The creators of this project are not responsible for any injury, damage, or legal issues that may arise from improper use, installation, or handling of high-voltage equipment. Always follow local safety regulations and consult a professional if unsure.</p>
-
-<hr />
-
+<hr/>
 <h2>📢 Some Image from the project</h2>
-
 <table>
-  <tr>
-    <td><img src="https://github.com/user-attachments/assets/e72ec4d6-dd25-4c1c-862d-3d7ec89eb1a2" width="75%"></td>
-    <td><img src="https://github.com/user-attachments/assets/3ce1f4d4-bde2-49d8-bf43-a0c3364776c4" width="50%"></td>
-  </tr>
-  <tr>
-    <td><img src="https://github.com/user-attachments/assets/d1e4c71d-dabd-413e-8ad6-07c0fcf0b0fd" height="50%"></td>
-    <td><img src="https://github.com/user-attachments/assets/875c6860-1171-4157-9eb8-ab311ed982ce" height="50%"></td>
-  </tr>
+<tr>
+<td><img src="https://github.com/user-attachments/assets/e72ec4d6-dd25-4c1c-862d-3d7ec89eb1a2" width="75%"/></td>
+<td><img src="https://github.com/user-attachments/assets/3ce1f4d4-bde2-49d8-bf43-a0c3364776c4" width="50%"/></td>
+</tr>
+<tr>
+<td><img height="50%" src="https://github.com/user-attachments/assets/d1e4c71d-dabd-413e-8ad6-07c0fcf0b0fd"/></td>
+<td><img height="50%" src="https://github.com/user-attachments/assets/875c6860-1171-4157-9eb8-ab311ed982ce"/></td>
+</tr>
 </table>
-
-<hr />
-
+<hr/>
 <p>Feel free to fork the project and adapt it to your experimental setup. Contributions and suggestions are welcome!</p>
-
 </body>
 </html>
