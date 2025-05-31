@@ -68,6 +68,7 @@ The values listed in the table are sent to Arduino to control the switchable fil
 
 ## 📡 Simple code for Send command to Arduino with Python and Matlab
 
+Python
 ```python
 import serial
 import time
