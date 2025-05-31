@@ -107,7 +107,7 @@ This project is provided “as is” without warranty of any kind. By using or b
 
 ---
 
-## 📢 Some Image from the project
+## 📷 Some Image from the project
 <table>
   <tr>
     <td><img src="https://github.com/user-attachments/assets/e72ec4d6-dd25-4c1c-862d-3d7ec89eb1a2" width="75%"></td>
