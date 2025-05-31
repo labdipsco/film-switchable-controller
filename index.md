@@ -1,4 +1,4 @@
-#USB-Controlled Switchable Film for Experimental Applications
+# USB-Controlled Switchable Film for Experimental Applications
 
 [go to github repository](https://github.com/labdipsco/film-switchable-controller/tree/main)
 
